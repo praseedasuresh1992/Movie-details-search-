@@ -15,6 +15,9 @@ search.addEventListener('click', async () => {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            if (data.Response === "False") {
+                throw new Error(data.Error || "Movie not found.");
+              }
             data.Search.forEach(movie => {
                 const detailedUrl = `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${apiKey}`;
                 fetch(detailedUrl)
@@ -39,7 +42,7 @@ search.addEventListener('click', async () => {
         .catch(err => {
 
             console.error("Error is Displayed :", err.message)
-            errorContainer.textContent = "something went wrong"
+            errorContainer.textContent = `something went wrong,${err.message}`
 
         })
 })
