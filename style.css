@@ -1,0 +1,174 @@
+/* Reset some default styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e1b1b;
+    margin: 0;
+    padding: 20px;
+    color: #410d0d;
+}
+
+h2 {
+    text-align: center;
+    color: #0cef94;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="button"] {
+    display: block;
+    margin: 10px auto 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #a6b425;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #b56f7d;
+}
+
+#movieDetails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: rgb(105, 7, 101);
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+#error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+   text-decoration: none;
+}
+#listmovie {
+    flex: 0 1 calc(50% - 20px); /* 2 columns with 20px gap */
+    box-sizing: border-box;
+    max-width: 600px;
+    margin: 100px ;
+    margin-bottom:100px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: #ab7b7b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 10px rgba(144, 8, 8, 0.1);
+    text-align: center;
+  }
+  
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  #title {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  #year,
+  #plot {
+    font-size: 1rem;
+    color: #444;
+    margin: 8px 50px;
+    
+  }
+  
+
+  /* ========== Responsive Styles ========== */
+
+/* Container styling */
+#listmovie {
+ 
+    max-width: 600px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: #eacdcd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    
+   
+  }
+  
+  /* Responsive image */
+  #listmovie img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Text styles */
+  #title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  #year,
+  #plot {
+    font-size: 1rem;
+    color: #444;
+    margin: 10px;
+  }
+  
+  /* MEDIA QUERIES*/
+  @media (max-width: 768px) {
+    #listmovie {
+      padding: 15px;
+    }
+  
+    #title {
+      font-size: 1.2rem;
+    }
+  
+    #year,
+    #plot {
+      font-size: 0.95rem;
+      margin: 8px;
+    }
+    
+  }
+  
+  @media (max-width: 480px) {
+    #listmovie {
+        flex: 1 calc(100% );
+      padding: 10px;
+    }
+  
+    #title {
+      font-size: 1.1rem;
+    }
+  
+    #year,
+    #plot {
+      font-size: 0.9rem;
+      margin: 6px;
+    }
+  }
+  
